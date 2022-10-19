@@ -1,17 +1,13 @@
 import PropTypes from "prop-types";
 import React from "react";
-import "../styles/saved-favourites-card.css";
+import "../styles/sass/saved-favourite-card.scss";
 
 const SavedFavouriteCard = ({ favId, title, onDeleteFavourite }) => {
   return (
     <div className="saved-favourite-card">
-      <div className="saved-favourite-card-listing">{title}</div>
-      <div className="saved-favourite-card-remove">
-        <button
-          type="button"
-          onClick={() => onDeleteFavourite(favId)}
-          className="remove"
-        >
+      <div className="listing">{title}</div>
+      <div className="remove">
+        <button type="button" onClick={() => onDeleteFavourite(favId)}>
           Remove
         </button>
       </div>

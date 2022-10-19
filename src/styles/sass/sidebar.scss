@@ -1,0 +1,10 @@
+@import "config";
+@import "sidebar-config";
+
+@if (min-width: $desktop) {
+  @include bp(desktop);
+} @else if (min-width: $mobile) {
+  @include bp(tablet);
+} @else if (max-width: $mobile) {
+  @include bp(mobile);
+}

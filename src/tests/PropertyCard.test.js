@@ -19,37 +19,31 @@ describe("PropertyCard", () => {
   test("renders title prop", () => {
     const { getByText } = render(<PropertyCard {...validProps} />);
 
-    expect(getByText("2-bed semi-detached")).toHaveClass("property-card-title");
+    expect(getByText("2-bed semi-detached")).toHaveClass("title");
   });
 
-  test("renders type prop", () => {
+  test("renders type and city prop", () => {
     const { getByText } = render(<PropertyCard {...validProps} />);
 
-    expect(getByText("Semi-Detatched")).toHaveClass("property-card-type");
+    expect(getByText("Semi-Detatched - Liverpool")).toHaveClass("type");
   });
 
   test("renders bedrooms prop", () => {
     const { getByText } = render(<PropertyCard {...validProps} />);
 
-    expect(getByText("2")).toHaveClass("property-card-bedrooms");
+    expect(getByText("2")).toHaveClass("bedrooms");
   });
 
   test("renders bathrooms prop", () => {
     const { getByText } = render(<PropertyCard {...validProps} />);
 
-    expect(getByText("1")).toHaveClass("property-card-bathrooms");
+    expect(getByText("1")).toHaveClass("bathrooms");
   });
 
   test("renders price prop", () => {
     const { getByText } = render(<PropertyCard {...validProps} />);
 
-    expect(getByText("200000")).toHaveClass("property-card-price");
-  });
-
-  test("renders city prop", () => {
-    const { getByText } = render(<PropertyCard {...validProps} />);
-
-    expect(getByText("Liverpool")).toHaveClass("property-card-city");
+    expect(getByText("200000")).toHaveClass("price");
   });
 
   test("renders email prop", () => {

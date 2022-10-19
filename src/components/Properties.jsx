@@ -5,7 +5,7 @@ import axios from "axios";
 import PropertyCard from "./PropertyCard";
 import Alert from "./Alert";
 import SideBar from "./SideBar";
-import "../styles/properties.css";
+import "../styles/sass/properties.scss";
 
 const Properties = ({ userID, properties, setProperties, alert, setAlert }) => {
   const { search } = useLocation();
@@ -32,7 +32,7 @@ const Properties = ({ userID, properties, setProperties, alert, setAlert }) => {
     <div className="properties">
       <SideBar />
       <Alert message={alert.message} success={alert.isSuccess} />
-      <div className="property-card-container">
+      <div className="container">
         {properties.map((property) => (
           <PropertyCard
             key={property._id}

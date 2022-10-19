@@ -1,0 +1,87 @@
+@import "config";
+
+@mixin bp($screen) {
+  @if $screen == desktop {
+    @media #{$desktop} {
+      @content;
+    }
+  } @else if $screen == tablet {
+    @media #{$tablet} {
+      @content;
+    }
+  }
+}
+
+.property-card {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 10px 10px 0px 10px;
+  row-gap: 10px;
+  @include bp(desktop) {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+  }
+  @include bp(tablet) {
+    width: 90%;
+    height: 93%;
+    row-gap: 10px;
+    margin: 10px;
+  }
+  .title {
+    font-weight: bold;
+  }
+  .bathrooms {
+    display: flex;
+    .icon {
+      margin-right: 5px;
+    }
+  }
+  .bedrooms {
+    display: flex;
+    .icon {
+      margin-right: 5px;
+    }
+  }
+  .email {
+    display: flex;
+    justify-content: center;
+    background-color: $buttonBackground;
+    padding: 10px;
+    &:hover {
+      background-color: lighten($buttonBackground, 10%);
+    }
+    .icon {
+      margin-right: 5px;
+    }
+    a {
+      color: white;
+      display: flex;
+      text-decoration: none;
+    }
+  }
+  .favourite {
+    .icon {
+      margin-right: 5px;
+    }
+    .save {
+      border: none;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      height: 40px;
+      width: 100%;
+      box-sizing: border-box;
+      border-radius: 0px;
+      background-color: $buttonBackground;
+      color: white;
+      font-size: 11pt;
+      &:hover {
+        background-color: lighten($buttonBackground, 10%);
+      }
+    }
+  }
+}

@@ -12,9 +12,7 @@ describe("SavedFavouriteCard", () => {
   test("renders title prop", () => {
     const { getByText } = render(<SavedFavouriteCard {...validProps} />);
 
-    expect(getByText("2-bed semi-detached")).toHaveClass(
-      "saved-favourite-card-listing"
-    );
+    expect(getByText("2-bed semi-detached")).toHaveClass("listing");
   });
 
   test("function fires", async () => {

@@ -1,0 +1,34 @@
+@import "config";
+
+.saved-favourite-card {
+  display: flex;
+  padding: 20px;
+  margin: 30px;
+  background-color: $whiteBackground;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-weight: bold;
+  .listing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+  .remove {
+    display: flex;
+    flex: -1;
+    button {
+      background-color: red;
+      box-sizing: border-box;
+      border-radius: 10px;
+      height: 50px;
+      width: 100px;
+      color: white;
+      font-size: 15px;
+      font-weight: bold;
+      &:hover {
+        background-color: darken(red, 10%);
+      }
+    }
+  }
+}

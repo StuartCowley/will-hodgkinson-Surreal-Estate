@@ -1,0 +1,45 @@
+@import "config";
+
+.add-property {
+  display: flex;
+  padding: 30pt;
+  align-items: center;
+  flex-direction: column;
+  font-size: 15pt;
+  .form {
+    display: grid;
+    grid-template-columns: auto;
+    background-color: $whiteBackground;
+    width: 500px;
+    height: 650px;
+    border-radius: 10px;
+    .field {
+      padding: 10px;
+      input {
+        box-sizing: border-box;
+        font-size: 10pt;
+        height: 20px;
+        padding: 5px;
+        width: 100%;
+      }
+      select {
+        box-sizing: border-box;
+        font-size: 10pt;
+        height: 20px;
+      }
+    }
+    .button {
+      padding: 10px;
+      button {
+        background-color: $buttonBackground;
+        height: 30px;
+        width: 50px;
+        font-size: 12pt;
+        color: white;
+        &:hover {
+          background-color: lighten($buttonBackground, 10%);
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import "../styles/property-card.css";
+import "../styles/sass/property-card.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBath,
@@ -24,41 +24,42 @@ const PropertyCard = ({
 }) => {
   return (
     <div className="property-card">
-      <div className="property-card-title">{title}</div>
-      <div className="property-card-type">{type}</div>
-      <div className="property-card-bathrooms">
-        <div className="property-card-bathrooms-icon">
+      <div className="title">{title}</div>
+      <div className="type">
+        {type} - {city}
+      </div>
+      <div className="bathrooms">
+        <div className="icon">
           <FontAwesomeIcon icon={faBath} />
         </div>
         {bathrooms}
       </div>
-      <div className="property-card-bedrooms">
-        <div className="property-card-bedrooms-icon">
+      <div className="bedrooms">
+        <div className="icon">
           <FontAwesomeIcon icon={faBed} />
         </div>
         {bedrooms}
       </div>
-      <div className="property-card-price">
+      <div className="price">
         <FontAwesomeIcon icon={faSterlingSign} />
         {price}
       </div>
-      <div className="property-card-city">{city}</div>
-      <div className="property-card-email">
+      <div className="email">
         <a href={`mailto:${email}`}>
-          <div className="property-card-email-icon">
+          <div className="icon">
             <FontAwesomeIcon icon={faEnvelope} />
           </div>
           Email
         </a>
       </div>
-      <div className="property-card-favourite">
+      <div className="favourite">
         {userID && (
           <button
             type="button"
             onClick={() => onSaveProperty(_id)}
             className="save"
           >
-            <div className="property-card-favourite-icon">
+            <div className="icon">
               <FontAwesomeIcon icon={faStar} />
             </div>
             Save

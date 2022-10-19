@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../styles/add-property.css";
+import "../styles/sass/add-property.scss";
 import Alert from "./Alert";
 
 const AddProperty = () => {
@@ -48,12 +48,12 @@ const AddProperty = () => {
 
   return (
     <div className="add-property">
-      <form className="add-property-form" onSubmit={handleAddProperty}>
+      <form className="form" onSubmit={handleAddProperty}>
         <Alert message={alert.message} success={alert.isSuccess} />
-        <div className="form-field">
+        <div className="field">
           <label htmlFor="title">
-            <div className="form-label">Title:</div>
-            <div className="form-input">
+            <div className="label">Title:</div>
+            <div className="input">
               <input
                 id="title"
                 name="title"
@@ -63,10 +63,10 @@ const AddProperty = () => {
             </div>
           </label>
         </div>
-        <div className="form-field">
+        <div className="field">
           <label htmlFor="type">
-            <div className="form-label">Type:</div>
-            <div className="form-input">
+            <div className="label">Type:</div>
+            <div className="input">
               <select
                 id="type"
                 name="type"
@@ -76,7 +76,7 @@ const AddProperty = () => {
                 <option value="Flat">Flat</option>
                 <option value="Detatched">Detatched</option>
                 <option value="Semi-Detatched">Semi-Detatched</option>
-                <option value="Tarraced">Terraced</option>
+                <option value="Terraced">Terraced</option>
                 <option value="End of Terrace">End of Terrace</option>
                 <option value="Cottage">Cottage</option>
                 <option value="Bungalow">Bungalow</option>
@@ -84,10 +84,10 @@ const AddProperty = () => {
             </div>
           </label>
         </div>
-        <div className="form-field">
+        <div className="field">
           <label htmlFor="bedrooms">
-            <div className="form-label">Bedrooms:</div>
-            <div className="form-input">
+            <div className="label">Bedrooms:</div>
+            <div className="input">
               <input
                 id="bedrooms"
                 name="bedrooms"
@@ -97,10 +97,10 @@ const AddProperty = () => {
             </div>
           </label>
         </div>
-        <div className="form-field">
+        <div className="field">
           <label htmlFor="bathrooms">
-            <div className="form-label">Bathrooms:</div>
-            <div className="form-input">
+            <div className="label">Bathrooms:</div>
+            <div className="input">
               <input
                 id="bathrooms"
                 name="bathrooms"
@@ -110,10 +110,10 @@ const AddProperty = () => {
             </div>
           </label>
         </div>
-        <div className="form-field">
+        <div className="field">
           <label htmlFor="price">
-            <div className="form-label">Price:</div>
-            <div className="form-input">
+            <div className="label">Price:</div>
+            <div className="input">
               <input
                 id="price"
                 name="price"
@@ -123,10 +123,10 @@ const AddProperty = () => {
             </div>
           </label>
         </div>
-        <div className="form-field">
+        <div className="field">
           <label htmlFor="city">
-            <div className="form-label">City:</div>
-            <div className="form-input">
+            <div className="label">City:</div>
+            <div className="input">
               <select
                 id="city"
                 name="city"
@@ -141,10 +141,10 @@ const AddProperty = () => {
             </div>
           </label>
         </div>
-        <div className="form-field">
+        <div className="field">
           <label htmlFor="email">
-            <div className="form-label">Email:</div>
-            <div className="form-input">
+            <div className="label">Email:</div>
+            <div className="input">
               <input
                 id="email"
                 name="email"
@@ -154,7 +154,7 @@ const AddProperty = () => {
             </div>
           </label>
         </div>
-        <div className="form-button">
+        <div className="button">
           <button type="submit">Add</button>
         </div>
       </form>
